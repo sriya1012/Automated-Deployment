@@ -30,10 +30,12 @@ jobs:
         id: publish_app
         uses: ServiceNow/sncicd-publish-app@2.0.1
         with:
-          versionTemplate: 2.0
+          versionTemplate: 1.1
           versionFormat: template
           # Optional, add +X to version number. Default: 1 
           # incrementBy: X
+          incrementBy: 1
+          isAppCustomization: true
         env:
           nowUsername: ${{ secrets.SN_USERNAME }}
           nowPassword: ${{ secrets.SN_PASSWORD }}
